@@ -8,10 +8,7 @@ local function get_treesitter_hl()
 	row = row - 1
 
 	local self = highlighter.active[buf]
-
-	if not self then
-		return {}
-	end
+	if not self then return {} end
 
 	local matches = {}
 
@@ -57,11 +54,11 @@ function M.noice()
 	local hl = vim.api.nvim_get_hl_by_name(final, true)
 	local color = string.format("#%x", hl['foreground'] or 0)
 
-	vim.cmd('hi Noice guifg='..color..' guibg='..color)
+	vim.cmd('hi DynamicCursor guifg='..color..' guibg='..color)
 end
 
 function M.setup(opts)
-	vim.opt.guicursor= "n:block-Noice,i:ver100-Noice"
+	vim.opt.guicursor= opts.guicursor or "n-v-c:block-DynamicCursor,i:ver100-DynamicCursor"
 	vim.cmd [[au CursorMoved * lua require"dynamic-cursor".noice()]]
 end
 

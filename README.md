@@ -28,5 +28,16 @@ Kitty:
 require("dynamic-cursor").setup()
 ```
 
+<details open>
+<summary> the default config looks something like: </summary>
 
-PS: The treesitter highlight function was mostly taken from [treesitter-playground](https://github.com/nvim-treesitter/playground).
+```lua
+require("dynamic-cursor").setup { 
+	guicursor = "n-v-c:block-DynamicCursor,i:ver100-DynamicCursor" 
+}
+```
+</details>
+
+---
+* This plugin exposes a highlight: `DynamicCursor` which can be used elsewhere.
+* The treesitter highlight function was mostly taken from [treesitter-playground](https://github.com/nvim-treesitter/playground).
