@@ -62,7 +62,7 @@ end
 
 function M.setup(opts)
 	vim.opt.guicursor= "n:block-Noice,i:ver100-Noice"
-	vim.cmd [[au CursorMoved * lua require"cursor".noice()]]
+	vim.cmd [[au CursorMoved * lua require"dynamic-cursor".noice()]]
 end
 
 return M

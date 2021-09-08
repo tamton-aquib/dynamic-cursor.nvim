@@ -23,5 +23,10 @@ Kitty:
     use 'tamton-aquib/dynamic-cursor.nvim'
     ```
 
+### Configuration
+```lua
+require("dynamic-cursor").setup()
+```
+
 
 PS: The treesitter highlight function was mostly taken from [treesitter-playground](https://github.com/nvim-treesitter/playground).
