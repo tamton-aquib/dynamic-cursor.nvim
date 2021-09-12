@@ -49,7 +49,8 @@ end
 
 function M.noice()
 	local ts_hi = get_treesitter_hl()
-	local final = #ts_hi >= 1 and ts_hi[#ts_hi] or "Normal"
+	local final = #ts_hi >= 1 and ts_hi[#ts_hi]
+	if type(final) ~= "string" then final = "Normal" end
 
 	local hl = vim.api.nvim_get_hl_by_name(final, true)
 	local color = string.format("#%x", hl['foreground'] or 0)
