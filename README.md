@@ -5,6 +5,8 @@ A neovim plugin in lua that gives the cursor dynamic highlight.
 Some terminals like alacritty has this by default. But some others like kitty does not support it.
 This plugin gets the treesitter highlight and sets it to cursor.
 
+> ❗ Kitty has introduced this recently: [afe728](https://github.com/kovidgoyal/kitty/commit/0fdafd83986d46ea5eecdd6174617bd71eafe728) so this plugin is obsolete now.
+
 Alacritty:
 
 ![alacritty](https://i.imgur.com/JtSV9ZD.png)
